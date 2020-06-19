@@ -1,0 +1,5 @@
+1 Ministop (101 "Kara-age Chicken" 13000) (201 "Oden" 25000) (202 "Sushi" 29000)
+2 CircleK (10 "Egg Noodle" 15000) (11 "Sandwich" 12000)
+6 KFC
+5 TheCoffeeHouse
+8 Lotte
