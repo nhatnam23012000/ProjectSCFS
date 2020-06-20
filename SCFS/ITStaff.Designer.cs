@@ -66,6 +66,8 @@
             this.lblRemoveNotification = new System.Windows.Forms.Label();
             this.btnRemoveCheck = new System.Windows.Forms.Button();
             this.lblAddNotification = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.txtStallOwner = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -337,7 +339,7 @@
             this.lsEditStall.ItemHeight = 16;
             this.lsEditStall.Location = new System.Drawing.Point(25, 193);
             this.lsEditStall.Name = "lsEditStall";
-            this.lsEditStall.Size = new System.Drawing.Size(451, 148);
+            this.lsEditStall.Size = new System.Drawing.Size(451, 164);
             this.lsEditStall.TabIndex = 26;
             // 
             // lblStallID
@@ -377,7 +379,7 @@
             // btnAddStallCmd
             // 
             this.btnAddStallCmd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddStallCmd.Location = new System.Drawing.Point(243, 277);
+            this.btnAddStallCmd.Location = new System.Drawing.Point(249, 311);
             this.btnAddStallCmd.Name = "btnAddStallCmd";
             this.btnAddStallCmd.Size = new System.Drawing.Size(74, 34);
             this.btnAddStallCmd.TabIndex = 31;
@@ -388,7 +390,7 @@
             // btnAddStallCancel
             // 
             this.btnAddStallCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddStallCancel.Location = new System.Drawing.Point(339, 277);
+            this.btnAddStallCancel.Location = new System.Drawing.Point(345, 311);
             this.btnAddStallCancel.Name = "btnAddStallCancel";
             this.btnAddStallCancel.Size = new System.Drawing.Size(74, 34);
             this.btnAddStallCancel.TabIndex = 32;
@@ -443,18 +445,37 @@
             // 
             this.lblAddNotification.AutoSize = true;
             this.lblAddNotification.BackColor = System.Drawing.Color.White;
-            this.lblAddNotification.Location = new System.Drawing.Point(208, 314);
+            this.lblAddNotification.Location = new System.Drawing.Point(35, 320);
             this.lblAddNotification.Name = "lblAddNotification";
             this.lblAddNotification.Size = new System.Drawing.Size(46, 17);
             this.lblAddNotification.TabIndex = 39;
             this.lblAddNotification.Text = "label5";
             // 
-            // Form4
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.White;
+            this.lbl1.Location = new System.Drawing.Point(47, 286);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(157, 17);
+            this.lbl1.TabIndex = 40;
+            this.lbl1.Text = "Nhập ID chủ quầy hàng";
+            // 
+            // txtStallOwner
+            // 
+            this.txtStallOwner.Location = new System.Drawing.Point(211, 283);
+            this.txtStallOwner.Name = "txtStallOwner";
+            this.txtStallOwner.Size = new System.Drawing.Size(223, 22);
+            this.txtStallOwner.TabIndex = 41;
+            // 
+            // ITStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(504, 390);
+            this.Controls.Add(this.txtStallOwner);
+            this.Controls.Add(this.lbl1);
             this.Controls.Add(this.lblAddNotification);
             this.Controls.Add(this.btnRemoveCheck);
             this.Controls.Add(this.lblRemoveNotification);
@@ -494,7 +515,7 @@
             this.Controls.Add(this.lsEditStall);
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form4";
+            this.Name = "ITStaff";
             this.Text = "ITStaff";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -541,5 +562,7 @@
         private System.Windows.Forms.Label lblRemoveNotification;
         private System.Windows.Forms.Button btnRemoveCheck;
         private System.Windows.Forms.Label lblAddNotification;
+        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.TextBox txtStallOwner;
     }
 }

@@ -60,6 +60,8 @@ namespace SFCS
             btnRemoveCheck.Hide();
             lblAddNotification.Hide();
             lblAddNotification.Text = "";
+            txtStallOwner.Hide();
+            lbl1.Hide();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -99,6 +101,8 @@ namespace SFCS
             btnRemoveCheck.Hide();
             lblAddNotification.Hide();
             lblAddNotification.Text = "";
+            txtStallOwner.Hide();
+            lbl1.Hide();
 
             btnMaintenanceCancel.Show();
             btnMaintenanceOK.Show();
@@ -144,6 +148,8 @@ namespace SFCS
             btnRemoveCheck.Hide();
             lblAddNotification.Hide();
             lblAddNotification.Text = "";
+            txtStallOwner.Hide();
+            lbl1.Hide();
 
             lblAccName.Show();
             lblAccPass.Show();
@@ -260,6 +266,8 @@ namespace SFCS
             btnRemoveCheck.Hide();
             lblAddNotification.Hide();
             lblAddNotification.Text = "";
+            txtStallOwner.Hide();
+            lbl1.Hide();
 
             btnMaintenanceOK.Hide();
             btnMaintenanceCancel.Hide();
@@ -305,6 +313,8 @@ namespace SFCS
             lblRemoveNotification.Show();
             lblAddNotification.Show();
             lblAddNotification.Text = "";
+            txtStallOwner.Show();
+            lbl1.Show();
         }
 
         private void btnAddStallCancel_Click(object sender, EventArgs e)
@@ -337,6 +347,8 @@ namespace SFCS
             txtStallID.Text = "";
             lblAddNotification.Hide();
             lblAddNotification.Text = "";
+            txtStallOwner.Hide();
+            lbl1.Hide();
 
             lblStallID.Show();
             txtStallID.Show();
@@ -377,7 +389,15 @@ namespace SFCS
                 }
                 else
                 {
-                    addStall((int)Double.Parse(txtStallID.Text), txtStallName.Text);                    
+                    if (txtStallOwner.Text == "")
+                    {
+                        lblAddNotification.ForeColor = Color.Red;
+                        lblAddNotification.Text = "Vui lòng nhập ID chủ cửa hàng!";
+                    }
+                    else
+                    {
+                        addStall((int)Double.Parse(txtStallID.Text), txtStallName.Text, (int)Double.Parse(txtStallOwner.Text));
+                    }
                 }
             }
         }
@@ -443,10 +463,10 @@ namespace SFCS
                 lblAddAccNoti.Text = "Tên đăng nhập đã tồn tại!";
             }
         }
-        public void addStall(int id, String name)
+        public void addStall(int id, String name, int owner)
         {
             LinkedList<Food> foods = new LinkedList<Food>();
-            if (stallDatabase.addStall(id, txtStallName.Text, foods))
+            if (stallDatabase.addStall(id, txtStallName.Text, foods, owner))
             {
                 lblAddNotification.ForeColor = Color.Green;
                 lblAddNotification.Text = "Tạo cửa hàng thành công!";
